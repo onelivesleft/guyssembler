@@ -1,0 +1,25 @@
+{
+    "name": "guyssembler",
+    "displayName": "guyssembler",
+    "description": "Language support for guyssembly",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.61.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "guy",
+            "aliases": ["guy", "guy"],
+            "extensions": ["guy"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "guy",
+            "scopeName": "source.guy",
+            "path": "./syntaxes/guy.tmLanguage.json"
+        }]
+    }
+}
