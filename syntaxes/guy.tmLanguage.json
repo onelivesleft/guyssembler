@@ -3,30 +3,293 @@
 	"name": "guy",
 	"patterns": [
 		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
+			"include": "#guy"
 		}
 	],
+	"scopeName": "source.guy",
 	"repository": {
-		"keywords": {
+		"guy": {
 			"patterns": [{
-				"name": "keyword.control.guy",
-				"match": "\\b(if|while|for|return)\\b"
-			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.guy",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
+				"match": "^\\s*(---)",
+				"captures":
 				{
-					"name": "constant.character.escape.guy",
-					"match": "\\\\."
+					"1":
+					{
+						"name": "punctuation.separator.debug.guy"
+					}
 				}
+			},
+			{
+				"match": "^\\s*((\\$)\\w+)\\s*(=)\\s*((\\$)[0-7])\\b",
+				"captures":
+                    {
+                        "1":
+                        {
+							"name": "variable.other.declaration.register.jai"
+						},
+                        "2":
+                        {
+							"name": "punctuation.register.guy"
+                        },
+                        "3":
+                        {
+                            "name": "punctuation.equals.guy"
+                        },
+                        "4":
+                        {
+							"name": "keyword.other.register.guy"
+						},
+                        "5":
+                        {
+							"name": "punctuation.register.guy"
+                        }
+                    }
+			},
+			{
+				"match": "^\\s*((#)\\w+)\\s*(=)\\s*(-?[0-9]+\\.?[0-9]*)\\b",
+				"captures":
+                    {
+                        "1":
+                        {
+							"name": "constant.numeric.guy"
+						},
+                        "2":
+                        {
+							"name": "punctuation.constant.guy"
+                        },
+                        "3":
+                        {
+                            "name": "punctuation.equals.guy"
+                        }
+                    }
+			},
+			{
+				"match": "^\\s*((@)\\w+)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "constant.other.label.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.label.guy"
+					}
+				}
+			},
+			{
+				"match": "((;).*)(debug)(.*)$",
+				"captures":
+				{
+					"1":
+					{
+						"name": "comment.line.semicolon.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.comment.guy"
+					},
+					"3":
+					{
+						"name": "keyword.other.debug.guy"
+					},
+					"4":
+					{
+						"name": "comment.line.semicolon.guy"
+					}
+				}
+			},
+			{
+				"match": "((;).*)$",
+				"captures":
+				{
+					"1":
+					{
+						"name": "comment.line.semicolon.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.comment.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(load|save|clr|set|page|flag|add|sub|mul|div|mod|pow|math|stack|info|look|and|or|xor|shl|shr|rotl|rotr|pad|flagi|flagf|casti|castf|fcmp|fjmp|ffwd|fbck|fret|fcall|sin|cos|tan|asin|acos|atan|rng|not|sqrt|log|exp|abs|pc|sp|state|x|y|time|weapon|ammo|height|wheight|score|countdown|killer|enemies|facing|wwidth|angle|mode|push|peek|pop|spage|reset)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(fire|act|face|raise|lower|idle|aim|walk|run|drop|leap|lift|right|left)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.action.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(cmp=|cmp<|cmp>)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.cmp.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(debug|snap)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.debug.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(end|int)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.directive.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(goto|ret)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.control.jump.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(jmp!|jmp0|jmp)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.control.jump.jmp.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(fwd!|fwd0|fwd)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.control.jump.fwd.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(bck!|bck0|bck)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.control.jump.bck.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(call!|call0|call)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.control.jump.call.guy"
+					}
+				}
+			},
+			{
+				"match": "(<<|>>|vv|^^)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.operator.guy"
+					}
+				}
+			},
+			{
+				"match": "((\\$)[0-7])\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.register.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.register.guy"
+					}
+				}
+			},
+			{
+				"match": "((\\$)\\w+)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "variable.other.register.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.register.guy"
+					}
+				}
+			},
+			{
+				"match": "((#)\\w+)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "constant.numeric.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.constant.guy"
+					}
+				}
+			},
+			{
+				"match": "((@)\\w+)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "constant.other.label.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.label.guy"
+					}
+				}
+			},
+			{
+				"match": "(,)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "punctuation.optional.comma.guy"
+					}
+				}
+			}
 			]
 		}
-	},
-	"scopeName": "source.guy"
+	}
 }
