@@ -134,7 +134,7 @@
 				}
 			},
 			{
-				"match": "^\\s*(fire|act|face|raise|lower|idle|aim|walk|run|drop|leap|lift|right|left)",
+				"match": "^\\s*(fire|act|face|raise|lower|idle|aim|walk|run|drop|leap|lift|right|left|strike)",
 				"captures":
 				{
 					"1":

@@ -1,7 +1,10 @@
 # Change Log
 
+## v1.0.3 - 2021.10.30
+* Added `strike`
+
 ## v1.0.2 - 2021.10.30
-* Added `lasthit`, `hits`, `kills`, `bullets`
+* Added `lasthit`, `hits`, `kills`, `bullets`,
 
 ## v1.0.1 - 2021.10.29
 * Lowered required vscode version
