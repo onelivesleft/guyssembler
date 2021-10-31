@@ -124,7 +124,7 @@
 				}
 			},
 			{
-				"match": "^\\s*(info|pc|sp|state|x|y|time|weapon|ammo|height|wheight|score|countdown|killer|enemies|facing|wwidth|angle|mode|lasthit|hits|kills|bullets)",
+				"match": "^\\s*(info|pc|sp|state|x|y|time|weapon|ammo|height|wheight|score|countdown|killer|enemies|facing|wwidth|angle|mode|lasthit|hits|kills|bullets|deaths|udeaths)",
 				"captures":
 				{
 					"1":
@@ -134,7 +134,7 @@
 				}
 			},
 			{
-				"match": "^\\s*(fire|act|face|raise|lower|idle|aim|walk|run|drop|leap|lift|right|left|strike)",
+				"match": "^\\s*(fire|use|arm|act|face|raise|lower|idle|aim|walk|run|drop|leap|lift|right|left|strike)",
 				"captures":
 				{
 					"1":
@@ -164,7 +164,7 @@
 				}
 			},
 			{
-				"match": "^\\s*(end|int)",
+				"match": "^\\s*(end|int|wait)",
 				"captures":
 				{
 					"1":

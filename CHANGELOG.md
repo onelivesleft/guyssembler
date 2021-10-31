@@ -1,5 +1,8 @@
 # Change Log
 
+## v1.0.4 - 2021.10.31
+* Added `arm`, `wait`, `deaths`, `udeaths`, `use`
+
 ## v1.0.3 - 2021.10.30
 * Added `strike`
 
