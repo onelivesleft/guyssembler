@@ -4,7 +4,7 @@
     "displayName": "guyssembler",
     "description": "Language support for guyssembly",
     "repository": "https://github.com/onelivesleft/guyssembler",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "engines": {
         "vscode": "^1.54.0"
     },

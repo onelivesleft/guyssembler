@@ -51,7 +51,7 @@
                     {
                         "1":
                         {
-							"name": "constant.numeric.guy"
+							"name": "constant.numeric.declaration.guy"
 						},
                         "2":
                         {
@@ -69,7 +69,7 @@
 				{
 					"1":
 					{
-						"name": "constant.other.label.guy"
+						"name": "constant.other.label.declaration.guy"
 					},
 					"2":
 					{
@@ -114,7 +114,7 @@
 				}
 			},
 			{
-				"match": "^\\s*(load|save|clr|set|page|flag|add|sub|mul|div|mod|pow|math|stack|look|and|or|xor|shl|shr|rotl|rotr|pad|flagi|flagf|casti|castf|fcmp|fjmp|ffwd|fbck|fret|fcall|sin|cos|tan|asin|acos|atan|rng|not|sqrt|log|exp|abs|push|peek|pop|spage|reset)",
+				"match": "^\\s*(load|save|clr|set|page|flag|swp|add|sub-|sub|mul|div-|div|mod|pow|math|stack|look|and|or|xor|shl|shr|rotl|rotr|pad|flagi|flagf|casti|castf|fcmp|fjmp|ffwd|fbck|fret|fcall|sin|cos|tan|asin|acos|atan|rng|not|sqrt|log|exp|abs|push|peek|pop|spage|reset)",
 				"captures":
 				{
 					"1":
@@ -124,7 +124,7 @@
 				}
 			},
 			{
-				"match": "^\\s*(info|pc|sp|state|x|y|time|weapon|ammo|height|wheight|score|countdown|killer|enemies|facing|wwidth|angle|mode|lasthit|hits|kills|bullets|deaths|udeaths)",
+				"match": "^\\s*(info|pc|sp|state|x|y|time|weapon|ammo|height|wheight|score|countdown|killer|enemies|facing|wwidth|angle|mode|lasthit|hits|kills|bullets|deaths|udeaths|match)",
 				"captures":
 				{
 					"1":
@@ -174,7 +174,7 @@
 				}
 			},
 			{
-				"match": "^\\s*(goto|ret)",
+				"match": "^\\s*(goto)",
 				"captures":
 				{
 					"1":
@@ -220,6 +220,16 @@
 					"1":
 					{
 						"name": "keyword.control.jump.call.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(ret!|ret0|ret)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.control.jump.ret.guy"
 					}
 				}
 			},

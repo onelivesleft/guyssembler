@@ -1,5 +1,12 @@
 # Change Log
 
+## v1.0.6 - 2021.11.
+* Added `sub-`, `div-`, `swp`
+* Differentiated declaration vs use
+
+## v1.0.5 - 2021.11.01
+* Added `ret!`, `ret0`, `match`
+
 ## v1.0.4 - 2021.10.31
 * Added `arm`, `wait`, `deaths`, `udeaths`, `use`
 
