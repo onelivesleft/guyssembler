@@ -1,6 +1,21 @@
 # Change Log
 
-## v1.0.6 - 2021.11.
+## v1.0.10 - 2021.11.01
+* Fixed assigned registers
+
+## v1.0.9 - 2021.11.01
+* Fixed `debug` in comment
+* Fixed registers
+
+## v1.0.8 - 2021.11.01
+* Fixed `^^`
+* Uniqued registers
+
+## v1.0.7 - 2021.11.01
+* Fixed typo
+* Updated punctuation
+
+## v1.0.6 - 2021.11.01
 * Added `sub-`, `div-`, `swp`
 * Differentiated declaration vs use
 

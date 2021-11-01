@@ -15,33 +15,25 @@
 				{
 					"1":
 					{
-						"name": "punctuation.separator.debug.guy"
+						"name": "punctuation.separator.guy"
 					}
 				}
 			},
 			{
-				"match": "^\\s*((\\$)\\w+)\\s*(=)\\s*((\\$)[0-7])\\b",
+				"match": "^\\s*((\\$)\\w+)\\s*(=)",
 				"captures":
                     {
                         "1":
                         {
-							"name": "variable.other.declaration.register.jai"
+							"name": "variable.other.declaration.register.guy"
 						},
                         "2":
                         {
-							"name": "punctuation.register.guy"
+							"name": "punctuation.register.declaration.guy"
                         },
                         "3":
                         {
                             "name": "punctuation.equals.guy"
-                        },
-                        "4":
-                        {
-							"name": "keyword.other.register.guy"
-						},
-                        "5":
-                        {
-							"name": "punctuation.register.guy"
                         }
                     }
 			},
@@ -55,7 +47,7 @@
 						},
                         "2":
                         {
-							"name": "punctuation.constant.guy"
+							"name": "punctuation.constant.declaration.guy"
                         },
                         "3":
                         {
@@ -73,7 +65,7 @@
 					},
 					"2":
 					{
-						"name": "punctuation.label.guy"
+						"name": "punctuation.label.declaration.guy"
 					}
 				}
 			},
@@ -91,7 +83,7 @@
 					},
 					"3":
 					{
-						"name": "keyword.other.debug.guy"
+						"name": "keyword.other.debug.comment.guy"
 					},
 					"4":
 					{
@@ -110,6 +102,118 @@
 					"2":
 					{
 						"name": "punctuation.comment.guy"
+					}
+				}
+			},
+			{
+				"match": "((\\$)0)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.register.zero.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.register.zero.guy"
+					}
+				}
+			},
+			{
+				"match": "((\\$)1)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.register.one.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.register.one.guy"
+					}
+				}
+			},
+			{
+				"match": "((\\$)2)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.register.two.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.register.two.guy"
+					}
+				}
+			},
+			{
+				"match": "((\\$)3)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.register.three.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.register.three.guy"
+					}
+				}
+			},
+			{
+				"match": "((\\$)4)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.register.four.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.register.four.guy"
+					}
+				}
+			},
+			{
+				"match": "((\\$)5)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.register.five.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.register.five.guy"
+					}
+				}
+			},
+			{
+				"match": "((\\$)6)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.register.six.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.register.six.guy"
+					}
+				}
+			},
+			{
+				"match": "((\\$)7)\\b",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.register.seven.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.register.seven.guy"
 					}
 				}
 			},
@@ -234,26 +338,12 @@
 				}
 			},
 			{
-				"match": "(<<|>>|vv|^^)",
+				"match": "(<<|>>|vv|\\^\\^)",
 				"captures":
 				{
 					"1":
 					{
 						"name": "keyword.operator.guy"
-					}
-				}
-			},
-			{
-				"match": "((\\$)[0-7])\\b",
-				"captures":
-				{
-					"1":
-					{
-						"name": "keyword.other.register.guy"
-					},
-					"2":
-					{
-						"name": "punctuation.register.guy"
 					}
 				}
 			},
