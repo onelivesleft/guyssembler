@@ -70,24 +70,38 @@
 				}
 			},
 			{
-				"match": "((;).*)(debug)(.*)$",
+				"match": "(\\[)(debug)(\\])",
 				"captures":
 				{
 					"1":
 					{
-						"name": "comment.line.semicolon.guy"
+						"name": "punctuation.definition.annotation.begin.debug.guy"
 					},
 					"2":
 					{
-						"name": "punctuation.comment.guy"
+						"name": "variable.annotation.debug.guy"
 					},
 					"3":
 					{
-						"name": "keyword.other.debug.comment.guy"
-					},
-					"4":
+						"name": "punctuation.definition.annotation.end.debug.guy"
+					}
+				}
+			},
+			{
+				"match": "(\\[)([a-z]+)(\\])",
+				"captures":
+				{
+					"1":
 					{
-						"name": "comment.line.semicolon.guy"
+						"name": "punctuation.definition.annotation.begin.guy"
+					},
+					"2":
+					{
+						"name": "variable.annotation.guy"
+					},
+					"3":
+					{
+						"name": "punctuation.definition.annotation.end.guy"
 					}
 				}
 			},
@@ -102,6 +116,20 @@
 					"2":
 					{
 						"name": "punctuation.comment.guy"
+					}
+				}
+			},
+			{
+				"match": "(CODE\\s*([0-7]))",
+				"captures":
+				{
+					"1":
+					{
+						"name": "meta.namespace.guy"
+					},
+					"2":
+					{
+						"name": "meta.namespace.id.guy"
 					}
 				}
 			},
@@ -268,7 +296,7 @@
 				}
 			},
 			{
-				"match": "^\\s*(end|int|wait)",
+				"match": "^\\s*(end|int|wait|code|exec)",
 				"captures":
 				{
 					"1":

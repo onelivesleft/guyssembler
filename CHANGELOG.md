@@ -1,5 +1,12 @@
 # Change Log
 
+## v1.0.12 - 2021.11.02
+* Added `exec`, `code`
+
+## v1.0.11 - 2021.11.02
+* Added tags
+* Removed `debug` comments
+
 ## v1.0.10 - 2021.11.01
 * Fixed assigned registers
 
