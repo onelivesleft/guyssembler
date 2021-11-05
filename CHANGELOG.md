@@ -1,5 +1,8 @@
 # Change Log
 
+## v1.0.13 - 2021.11.05
+* Added page index symbol (`|`)
+
 ## v1.0.12 - 2021.11.02
 * Added `exec`, `code`
 

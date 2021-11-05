@@ -134,6 +134,16 @@
 				}
 			},
 			{
+				"match": "(\\|)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "punctuation.page.guy"
+					}
+				}
+			},
+			{
 				"match": "((\\$)0)\\b",
 				"captures":
 				{
