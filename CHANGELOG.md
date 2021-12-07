@@ -1,5 +1,21 @@
 # Change Log
 
+## v1.0.17 - 2021.12.07
+* Added `loop!`, `loop<`, `op`, `floop`, `fop`
+
+## v1.0.16 - 2021.11.29
+* Fixed formatting of semicolons after double-quotes
+
+## v1.0.15 - 2021.11.29
+* Added memory operands.
+* Updated tags to use `{}`.
+
+## v1.0.14 - 2021.11.07
+* Added `swzl`, `swzr`, `swz`.
+* Added `comm`, `say`, `shout` et al.
+* Added `sayin`, `shoutin`, `hp`, `maxhp`.
+* Added `"`
+
 ## v1.0.13 - 2021.11.05
 * Added page index symbol (`|`)
 

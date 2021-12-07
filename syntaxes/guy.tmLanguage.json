@@ -70,7 +70,7 @@
 				}
 			},
 			{
-				"match": "(\\[)(debug)(\\])",
+				"match": "(\\{)(debug)(\\})",
 				"captures":
 				{
 					"1":
@@ -88,7 +88,7 @@
 				}
 			},
 			{
-				"match": "(\\[)([a-z]+)(\\])",
+				"match": "(\\{)([a-z]+)(\\})",
 				"captures":
 				{
 					"1":
@@ -140,6 +140,106 @@
 					"1":
 					{
 						"name": "punctuation.page.guy"
+					}
+				}
+			},
+			{
+				"match": "(\\[)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "punctuation.memory.begin.guy"
+					}
+				}
+			},
+			{
+				"match": "(\\])",
+				"captures":
+				{
+					"1":
+					{
+						"name": "punctuation.memory.end.guy"
+					}
+				}
+			},
+			{
+				"match": "(>>)?\\s*(\")([^\"]*)((;).*)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.operator.stringcount.prefix.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.definition.string.begin.guy"
+					},
+					"3":
+					{
+						"name": "string.quoted.double.guy"
+					},
+					"4":
+					{
+						"name": "comment.line.semicolon.guy"
+					},
+					"5":
+					{
+						"name": "punctuation.comment.guy"
+					}
+				}
+			},
+			{
+				"match": "(>>)?\\s*(\")([^\"]*)(\")\\s*(<<)?",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.operator.stringcount.prefix.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.definition.string.begin.guy"
+					},
+					"3":
+					{
+						"name": "string.quoted.double.guy"
+					},
+					"4":
+					{
+						"name": "punctuation.definition.string.end.guy"
+					},
+					"5":
+					{
+						"name": "keyword.operator.stringcount.postfix.guy"
+					}
+				}
+			},
+			{
+				"match": "(>>)?\\s*(\")([^\"]*)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.operator.stringcount.prefix.guy"
+					},
+					"2":
+					{
+						"name": "punctuation.definition.string.begin.guy"
+					},
+					"3":
+					{
+						"name": "string.quoted.double.guy"
+					}
+				}
+			},
+			{
+				"match": "(\")",
+				"captures":
+				{
+					"1":
+					{
+						"name": "punctuation.definition.string.guy"
 					}
 				}
 			},
@@ -256,7 +356,7 @@
 				}
 			},
 			{
-				"match": "^\\s*(load|save|clr|set|page|flag|swp|add|sub-|sub|mul|div-|div|mod|pow|math|stack|look|and|or|xor|shl|shr|rotl|rotr|pad|flagi|flagf|casti|castf|fcmp|fjmp|ffwd|fbck|fret|fcall|sin|cos|tan|asin|acos|atan|rng|not|sqrt|log|exp|abs|push|peek|pop|spage|reset)",
+				"match": "^\\s*(load|save|clr|set|page|flag|swp|add|sub-|sub|mul|div-|div|mod|pow|math|stack|look|and|or|xor|shl|shr|rotl|rotr|pad|flagi|flagf|casti|castf|fcmp|fjmp|ffwd|fbck|fret|fcall|fop|floop|sin|cos|tan|asin|acos|atan|rng|not|sqrt|log|exp|abs|push|peek|pop|spage|reset|swzl|swzr|swz)",
 				"captures":
 				{
 					"1":
@@ -266,7 +366,7 @@
 				}
 			},
 			{
-				"match": "^\\s*(info|pc|sp|state|x|y|time|weapon|ammo|height|wheight|score|countdown|killer|enemies|facing|wwidth|angle|mode|lasthit|hits|kills|bullets|deaths|udeaths|match)",
+				"match": "^\\s*(info|pc|sp|state|x|y|time|weapon|ammo|height|wheight|score|countdown|killer|enemies|facing|wwidth|angle|mode|lasthit|hits|kills|bullets|deaths|udeaths|match|sayin|shoutin|hp|maxhp)",
 				"captures":
 				{
 					"1":
@@ -282,6 +382,16 @@
 					"1":
 					{
 						"name": "keyword.other.action.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(comm|say[1-9]?|shout[1-9]?)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.other.communication.guy"
 					}
 				}
 			},
@@ -372,6 +482,16 @@
 					"1":
 					{
 						"name": "keyword.control.jump.ret.guy"
+					}
+				}
+			},
+			{
+				"match": "^\\s*(loop!|loop<)",
+				"captures":
+				{
+					"1":
+					{
+						"name": "keyword.control.jump.loop.guy"
 					}
 				}
 			},
